@@ -1,0 +1,41 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1045 &1
+EditorBuildSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Scenes:
+  - enabled: 0
+    path: Assets/_Sherry/TutorialTest.unity
+    guid: fb374d6548d371247908bbf754029271
+  - enabled: 0
+    path: Assets/_Sherry/Sherry_OutcomeTest.unity
+    guid: fa4a50af062991f4a8b115accb3804ee
+  - enabled: 0
+    path: Assets/E/River Scene.unity
+    guid: 3eea39cfe45b2bc4d8b93ac76198cae4
+  - enabled: 1
+    path: Assets/_Sherry/StartMenu.unity
+    guid: 9e95ebfceae69d04f87913f2cc3d2da5
+  - enabled: 1
+    path: Assets/_Sherry/CreditPage.unity
+    guid: 927044a6539b5ad4398b27ad14d02037
+  - enabled: 1
+    path: Assets/TutorialFinal.unity
+    guid: f74eb1abbddf48544b5a1be0df7fb19d
+  - enabled: 1
+    path: Assets/_Sherry/MadOwnerScene.unity
+    guid: cf51d6af06aa691408eacc00f259cba8
+  - enabled: 1
+    path: Assets/JunkyardFinal.unity
+    guid: bbb7a2417be69d742bf23641618b1f73
+  - enabled: 1
+    path: Assets/_Sherry/EscapeJunkyard.unity
+    guid: 504d72e90b5820645a36c1bfcffdc47a
+  - enabled: 1
+    path: Assets/RiverFinal.unity
+    guid: b5cd55a61c739844fa78ceca71771b1d
+  - enabled: 1
+    path: Assets/E/EndingScene.unity
+    guid: 77e35c440f912e64c8041068ad7cf47c
+  m_configObjects: {}
