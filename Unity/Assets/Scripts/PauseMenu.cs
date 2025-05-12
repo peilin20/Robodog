@@ -14,11 +14,34 @@ public class PauseMenu : MonoBehaviour
         {
             Instance = this;
             DontDestroyOnLoad(gameObject);
+            SceneManager.sceneLoaded += OnSceneLoaded;
+
+            // 自动绑定
+            if (menuUI == null)
+            {
+                menuUI = transform.Find("Canvas/Canvas(PauseMenu)")?.gameObject;
+                if (menuUI == null)
+                    Debug.LogWarning("menuUI not found! PauseMenu may not work.");
+            }
         }
         else
         {
             Destroy(gameObject);
-            return;
+        }
+    }
+
+    private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    {
+        isPaused = false;
+        Time.timeScale = 1f;
+
+        if (menuUI != null)
+        {
+            menuUI.SetActive(false);
+        }
+        else
+        {
+            Debug.LogWarning("menuUI is null after scene load!");
         }
     }
 
@@ -50,7 +73,7 @@ public class PauseMenu : MonoBehaviour
     {
         menuUI.SetActive(false);
         Time.timeScale = 1f;
-        SceneManager.LoadScene("TutorialFinal");
+        SceneManager.LoadScene("StartMenu");
         isPaused = false;
     }
 
