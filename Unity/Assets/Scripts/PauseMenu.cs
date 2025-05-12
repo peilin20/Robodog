@@ -48,6 +48,7 @@ public class PauseMenu : MonoBehaviour
     // Only called by the Pause button
     public void OpenMenu()
     {
+        Debug.LogWarning("isPaused="+isPaused);
         if (isPaused) return;
         menuUI.SetActive(true);
         Time.timeScale = 1f;
