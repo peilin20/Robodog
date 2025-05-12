@@ -27,7 +27,7 @@ public class PauseMenu : MonoBehaviour
     {
         if (isPaused) return;
         menuUI.SetActive(true);
-        Time.timeScale = 0f;
+        Time.timeScale = 1f;
         isPaused = true;
     }
 
@@ -40,18 +40,23 @@ public class PauseMenu : MonoBehaviour
 
     public void RestartLevel()
     {
+        menuUI.SetActive(false);
         Time.timeScale = 1f;
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        isPaused = false;
     }
 
     public void RestartGame()
     {
+        menuUI.SetActive(false);
         Time.timeScale = 1f;
         SceneManager.LoadScene("TutorialFinal");
+        isPaused = false;
     }
 
     public void QuitGame()
     {
+
         Application.Quit();
         Debug.Log("Quit Game");
     }
